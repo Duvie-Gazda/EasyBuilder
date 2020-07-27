@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dtkt3pe98DT1p7EdJaV2k/zLEu3hl6sJBTCgm4vXZyt/NpwMTyMU8bKrpWM+FsgZx+gSIZ9kXXd3QQ7ptnT+Ig==",
+  "success": true,
+  "projectFilePath": "/home/vitalik/Документи/projects/server/EasyBuilderAPI/EasyBuilderAPI.csproj",
+  "expectedPackageFiles": [
+    "/home/vitalik/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
