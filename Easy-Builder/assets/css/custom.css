@@ -1,0 +1,51 @@
+.panel-elements{
+    width: 300px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 1.25rem rgba(31,45,61,.04);
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+}
+.drug-menu .card{
+    padding: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.top{
+    background-color: #53a197;
+}
+.more-el-panel , #dark-theme-toggle-el-area{
+    margin-left: 15px;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#dark-theme-toggle-el-area{
+    margin-left: 30px;
+    padding-top:7px
+}
+.more-el-panel{
+    margin-right: -20px;
+}
+.unselectable {
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+#container-PB{
+    padding-top: 20px;
+}
+.file-dropdown-menu-toggler{
+    display: none;
+    
+}

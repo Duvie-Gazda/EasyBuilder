@@ -15,7 +15,6 @@ namespace EasyBuilderAPI
 {
     public class Startup
     {
-        readonly string MyAllowSpecificOrigins = "*";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,13 +26,7 @@ namespace EasyBuilderAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddCors(options =>{
-                options.AddPolicy(name:MyAllowSpecificOrigins,
-                    builder =>{
-                        builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
-                    }
-                );
-            });
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +42,9 @@ namespace EasyBuilderAPI
             app.UseRouting();
 
             app.UseAuthorization();
-            app.UseCors(MyAllowSpecificOrigins);
+            app.UseCors(builder => builder.WithOrigins("*")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod());
 
             app.UseEndpoints(endpoints =>
             {

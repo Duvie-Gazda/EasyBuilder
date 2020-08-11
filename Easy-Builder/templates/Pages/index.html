@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Easy Builder</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+        <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../assets/plugins/font-awesome/css/all.min.css" rel="stylesheet">
+        <link href="../../assets/css/connect.css" rel="stylesheet">
+        <link href="../../assets/css/dark_theme.css" rel="stylesheet">
+        <link href="../../assets/css/custom.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="connect-container align-content-stretch d-flex flex-wrap">
+            
+            <div class='loader'>
+                <div class='spinner-grow text-primary' role='status'>
+                    <span class='sr-only'>Loading...</span>
+                </div>
+            </div>
+            <div class="page-sidebar">
+                <div class="logo-box unselectable">
+                    <a class="logo-text">EasyBuider</a> 
+                    <a id="sidebar-state" class="material-icons">close</a>
+                </div>
+                <div class="page-sidebar-inner slimscroll">
+                    <ul class="accordion-menu">
+                        <li class="sidebar-title">
+                            connect
+                        </li>
+                        <li class="active-page">
+                            <a href="index.html" class="active"><i class="material-icons-outlined">home</i>Home</a>
+                        </li>
+                        <li>
+                            <a href="profile.html"><i class="material-icons-outlined">account_circle</i>Profile</a>
+                        </li>
+                        <li>
+                            <a href="file-manager.html"><i class="material-icons">cloud_queue</i>File Manager</a>
+                        </li>
+                        <li>
+                            <a href="todo.html"><i class="material-icons">done</i>Todo</a>
+                        </li>
+                        <li>
+                            <a href="">Pages<i class="material-icons has-sub-menu">add</i></a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="404.html">404</a>
+                                </li>
+                                <li>
+                                    <a href="500.html">500</a>
+                                </li>
+                                <li>
+                                    <a href="sign-in.html">Sign In</a>
+                                </li>
+                                <li>
+                                    <a href="sign-up.html">Sign Up</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-container">
+                <div class="page-header">
+                    <nav class="navbar navbar-expand">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <ul class="navbar-nav">
+                            <li class="nav-item small-screens-sidebar-link">
+                                <a href="#" class="nav-link"><i class="material-icons-outlined">menu</i></a>
+                            </li>
+                            <li class="nav-item nav-profile dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="../../assets/images/avatars/profile-image-1.png" alt="profile image">
+                                    <span>Nancy Moore</span><i class="material-icons dropdown-icon">keyboard_arrow_down</i>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="settings.html">Settings</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Privacy Policy</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Log out</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <span  class="nav-link unselectable" id="dark-theme-toggle"></span>
+                            </li>
+                        </ul>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="addElement.html" class="nav-link">Add Element</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pageBuilder.html" class="nav-link">Go Build</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">My works</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navbar-search">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" name="search" id="nav-search" placeholder="Search...">
+                                </div>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+                <div class="page-content">
+                    <div class="page-info">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item active" aria-current="page">Home</li>
+                            </ol>
+                        </nav>
+                        <div class="page-options">
+                            <a href="#" class="btn btn-primary">Upgrade</a>
+                        </div>
+                    </div>
+                    <div class="row"> 
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">Header</div>
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos tenetur dignissimos laudantium perferendis error ipsum nisi molestias magnam vero odio ipsam fuga consectetur dolores, enim ex accusantium atque possimus iure.
+                                </div>
+                                <div class="card-footer">Footer</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">Header</div>
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos tenetur dignissimos laudantium perferendis error ipsum nisi molestias magnam vero odio ipsam fuga consectetur dolores, enim ex accusantium atque possimus iure.
+                                </div>
+                                <div class="card-footer">Footer</div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="alert alert-info no-m" role="alert">
+                                        Data has been updated 35 minutes ago, go to the reports page to access data history.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card top-products">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Popular Products<span class="card-title-helper">Today</span></h5>
+                                        <div class="top-products-list">
+                                            <div class="product-item">
+                                                <h5>Alpha - File Hosting Service</h5>
+                                                <span>4,037 downloads</span>
+                                                <i class="material-icons product-item-status product-item-success">arrow_upward</i>
+                                            </div>
+                                            <div class="product-item">
+                                                <h5>Lime - Task Managment Dashboard</h5>
+                                                <span>1,876 downloads</span>
+                                                <i class="material-icons product-item-status product-item-success">arrow_upward</i>
+                                            </div>
+                                            <div class="product-item">
+                                                <h5>Space - Meetup Hosting App</h5>
+                                                <span>1,252 downloads</span>
+                                                <i class="material-icons product-item-status product-item-danger">arrow_downward</i>
+                                            </div>
+                                            <div class="product-item">
+                                                <h5>Meteor - Messaging App</h5>
+                                                <span>938 downloads</span>
+                                                <i class="material-icons product-item-status product-item-success">arrow_upward</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="card card-transactions">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Transactions<a href="#" class="card-title-helper blockui-transactions"><i class="material-icons">refresh</i></a></h5>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">ID</th>
+                                                        <th scope="col">Company</th>
+                                                        <th scope="col">Amount</th>
+                                                        <th scope="col">Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>0776</td>
+                                                        <td>Sale Management</td>
+                                                        <td>$18, 560</td>
+                                                        <td><span class="badge badge-success">Finished</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0759</td>
+                                                        <td>Dropbox</td>
+                                                        <td>$40, 672</td>
+                                                        <td><span class="badge badge-warning">Waiting</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0741</td>
+                                                        <td>Social Media</td>
+                                                        <td>$13, 378</td>
+                                                        <td><span class="badge badge-info">In Progress</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0740</td>
+                                                        <td>Envato Market</td>
+                                                        <td>$17, 456</td>
+                                                        <td><span class="badge badge-info">In Progress</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0735</td>
+                                                        <td>Graphic Design</td>
+                                                        <td>$29, 999</td>
+                                                        <td><span class="badge badge-secondary">Canceled</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> 
+                                        </div>     
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                    <div class="page-footer">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <span class="footer-text">2019 © EasyBuilder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../assets/plugins/jquery/jquery-3.4.1.min.js"></script>
+        <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../../assets/js/connect.js"></script>
+    </body>
+</html>

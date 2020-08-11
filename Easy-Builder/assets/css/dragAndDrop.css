@@ -1,0 +1,17 @@
+.elements-area{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 999;
+}
+.droppable-panel-elements{
+    height: 30%;
+    position: fixed;
+}
+.right{
+    background-color: white;
+    opacity: 30%;
+    position: fixed;
+    height: 100%;
+}
