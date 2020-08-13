@@ -22,13 +22,13 @@ body{
     position: absolute;
     width: 70px;
     height: 100vh;
-    padding-top: 30px;
     margin-left: -70px;
     box-shadow: 0 0 1rem 1rem rgba(31,45,61,.04);
     -webkit-transition: background .2s ease-in-out;
     -moz-transition: background .2s ease-in-out;
     -o-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
+    overflow-y: scroll;
 }
 .nav-panel-list-PB{
     list-style: none;
@@ -113,6 +113,7 @@ body{
     height: 100vh;
     padding-right: 50px;
     padding-left: 55px; 
+    overflow-y: scroll;
 }
 .extra-panel-EasyBuilder{
     width: 0px;
@@ -157,11 +158,10 @@ body{
     overflow-x: hidden;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15%;
+    align-self: center;
 }
 .page-demo-smartphone-horizontal{
     width: 550px;
-    margin-top: 25%;
     height: 270px;
     border-top: 0.5px solid black;
     border-bottom: 0.5px solid black;
@@ -194,7 +194,7 @@ body{
     margin:0px;
 }
 
-.previesw-card{
+.preview-card{
     padding-bottom:20px;
     padding-top: 20px;
     width: 70px;

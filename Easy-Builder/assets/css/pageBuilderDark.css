@@ -1,8 +1,20 @@
+.dark-theme{
+    background-color: #1F2128;
+}
 .dark-theme .nav-panel-PB{
     background: #1F2128;
-    color:white;
+    color:#7c7e8d;
+}
+.dark-theme .extra-panel-EasyBuilder{
+    background-color: #1F2128;
+}
+.dark-theme .content-extra-panel-EasyBuilder {
+    background-color: #1F2128;
+}
+.dark-theme .element-item{
+    color: #7c7e8d;
 }
 .dark-theme .nav-panel-PB .card{
-    box-shadow: 0 0 5px rgba(255, 250, 250, 0.5);
+    box-shadow: insert 0 0 5px rgba(255, 250, 250, 0.5);
 
 }
