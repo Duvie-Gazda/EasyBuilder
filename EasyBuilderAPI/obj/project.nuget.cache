@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZG+ZJY09bsPWySXTxqlNH2PsSETU1vvLY7EglVjjONustG+yn2L0vk8LCGBNCvFW1YSGLYAFqu20hqX9rfUUpg==",
+  "dgSpecHash": "TDQGqB6hvnCcetrt8jNxeYEP7BOIGl+rmm43sOtiecgxO14TMywjOiSUhDfOcrtrqksAQhzA5RJif2DsAmMRMA==",
   "success": true,
-  "projectFilePath": "/home/vitalik/Документи/projects/easy-builder/EasyBuilderAPI/EasyBuilderAPI.csproj",
+  "projectFilePath": "/home/vitalik/Документи/EasyBuilder/EasyBuilderAPI/EasyBuilderAPI.csproj",
   "expectedPackageFiles": [
     "/home/vitalik/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/home/vitalik/.nuget/packages/microsoft.bcl.hashcode/1.1.0/microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

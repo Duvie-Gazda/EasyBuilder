@@ -128,7 +128,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>   
+                    </div> 
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="btn btn-primary" id="send-data-Studio">Send</div>    
+                        </div>
+                    </div>  
                     <div class="page-footer">
                         <div class="row">
                             <div class="col-md-12">
@@ -145,24 +150,8 @@
         <script src="../../assets/js/connect.js"></script>
 
         <script src="../../assets/plugins/monaco/min/vs/loader.js"></script>
-    <script src="https://unpkg.com/emmet-monaco-es/dist/emmet-monaco.min.js"></script>
-    <script>
-      let themePicker = document.getElementById("theme-choose");
-      require.config({ paths: { vs: "../../assets/plugins/monaco/min/vs" } });
-      require(["vs/editor/editor.main"], function () {
-        var container = document.getElementById("editor");
-        emmetMonaco.emmetHTML();
-        monaco.editor.create(container, {
-          value: "",
-          language: "html",
-        });
-
-        themePicker.onchange = function () {
-          let theme = this.options[this.selectedIndex].getAttribute("value");
-          monaco.editor.setTheme(theme);
-        };
-      });
-    </script>
+        <script src="https://unpkg.com/emmet-monaco-es/dist/emmet-monaco.min.js"></script>
+        <script src="../../assets/js/pages/studio.js"></script>
 
     </body>
 </html>

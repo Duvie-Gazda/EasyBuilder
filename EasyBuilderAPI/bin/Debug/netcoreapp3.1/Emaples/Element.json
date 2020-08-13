@@ -1,0 +1,15 @@
+[
+    {
+        "html": "html",
+        "custom-css":"css",
+        "javaScript":"js",
+        "data":"data",
+        "css":[
+            "size-all",
+            "padding-margin-all",
+            "colors-all",
+            "box-shadow",
+            ""
+        ]
+    }
+]
