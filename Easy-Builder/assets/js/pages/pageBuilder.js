@@ -168,12 +168,44 @@ $('#devices-EasyBuilder').on('click', function(){
 })
 
 //shop show on shop popup
+// $('#shop-EasyBuilder').on('click', function(){
+//     let data = [];
+//     data.push(new elementOnPanel('<DIV>','','row','row','#shop-popup'))
+//     data.push(new elementOnPanel('<DIV>','smartphone','material-icons col-lg-5 element-card-extra-panel unselectable','smartphone-card','#row'));
+//     data.push(new elementOnPanel('<div>','tablet','material-icons col-lg-5 element-card-extra-panel unselectable','horizontal-card','#row'));
+
+//     //add elements
+//     addDataByClick('#shop-EasyBuilder',data,'#shop-popup',['content-shop-popup'],'shop-popup');
+// })
 $('#shop-EasyBuilder').on('click', function(){
     let data = [];
-    data.push(new elementOnPanel('<DIV>','','row','row','#shop-popup'))
-    data.push(new elementOnPanel('<DIV>','smartphone','material-icons col-lg-5 element-card-extra-panel unselectable','smartphone-card','#row'));
-    data.push(new elementOnPanel('<div>','tablet','material-icons col-lg-5 element-card-extra-panel unselectable','horizontal-card','#row'));
+    //close button
+    // data.push(new elementOnPanel('<DIV>','','row ','row-1','#shop-popup'));
+    // data.push(new elementOnPanel('<DIV>','','col-lg-11 unselectable','','#row-1'));
+    // data.push(new elementOnPanel('<DIV>','close','col-lg-1 unselectable material-icons close-popup','btn-close','#row-1'));
 
-    //add elements
-    addDataByClick('#shop-EasyBuilder',data,'#shop-popup',['content-shop-popup'],'shop-popup');
+    // shop panel
+    data.push(new elementOnPanel('<DIV>','','row','shopik','#shop-popup'));
+    
+    data.push(new elementOnPanel('<DIV>','','col-lg-3 buttons-shop','buttons-shop','#shopik'));
+    data.push(new elementOnPanel('<DIV>','','row','sidebar-row-1','#buttons-shop'));
+    data.push(new elementOnPanel('<DIV>','','col-lg-9','','#sidebar-row-1'));
+    data.push(new elementOnPanel('<DIV>','close','col-lg-3 material-icons unselectable','btn-close','#sidebar-row-1'));
+
+    //data.push(new elementOnPanel('<div>','Elements','btn-info','elements-btn-EasyBuilder','#buttons-shop'))
+
+    data.push(new elementOnPanel('<DIV>','','col-lg-9 shop-element-container','shop-elemetns-container','#shopik'));
+
+    $('#shop-popup').fadeIn(500).addClass('content-shop-popup');
+    appendElement(data);
+
+    if ($('#shop-popup').hasClass('content-shop-popup')){
+        $('#btn-close').on('click', function(){
+            $("#shop-popup").fadeOut(850,function(){
+                $('#shop-popup').empty();
+                $('#shop-popup').removeClass();
+                $('#shop-popup').addClass('shop-popup');
+            })
+        })
+    }
 })
