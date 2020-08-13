@@ -994,7 +994,8 @@ body.dark-theme {
     color:#7c7e8d;
     box-shadow: none;
 }
-.dark-theme .extra-panel-EasyBuilder{
+.dark-theme .extra-panel-EasyBuilder ,
+.extra-panel-Studio{
     background-color: #2b2d35;
     box-shadow: none;
 

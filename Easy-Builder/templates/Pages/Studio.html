@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Easy Builder</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+        <link href="../../assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="../../assets/plugins/font-awesome/css/all.min.css" rel="stylesheet">
+        <link href="../../assets/css/connect.css" rel="stylesheet">
+        <link href="../../assets/css/custom.css" rel="stylesheet">
+        <link href="../../assets/css/dragAndDrop.css" rel="stylesheet">
+        <link href="../../assets/css/studio.css" rel="stylesheet">
+        <link href="../../assets/css/dark_theme.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../assets/css/shop.css">
+    </head>
+    <body>
+        <div class='loader'>
+            <div class='spinner-grow text-primary' role='status'>
+                <span class='sr-only'>Loading...</span>
+            </div>
+        </div>
+        <div class="shop-popup" id="shop-popup"></div>
+        <div class="PageBuilder-container">
+            <div class="St-container-EasyBuilder">
+                <div class="nav-panel-St">
+                    <ul class="nav-panel-list-St unselectable">
+                        <li class="nav-panel-item-St">
+                            <div class="element-item" id="Elements-Studio">
+                                <i class="material-icons">html</i>
+                                <div class="element-card">
+                                    Html
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-panel-item-St">
+                            <div class="element-item " style="font-size: 3em; color: Tomato;">
+                                <i class="fab fa-js iconka"></i>
+                                <div class="element-card">
+                                    JS
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-panel-item-St">
+                            <div class="element-item" id="task-Studio">
+                                <i class="material-icons">add</i>
+                                <div class="element-card">
+                                    task
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-panel-item-St">
+                            <div class="element-item" id="settings-Studio">
+                                <i class="material-icons">settings</i>
+                                <div class="element-card">
+                                    Settings
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-panel-item-St">
+                            <div class="element-item" id="devices-Studio">
+                                <i class="material-icons">devices</i>
+                                <div class="element-card">
+                                    Preview
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-panel-item-St">
+                            <div class="element-item" id="history-Studio">
+                                <i class="material-icons">history</i>
+                                <div class="element-card">
+                                    History
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-panel-item-St">
+                            <div class="element-item" id="shop-Studio">
+                                <i class="material-icons">shopping_basket</i>
+                                <div class="element-card">
+                                    Shop
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-panel-item-St">
+                            <a href="index.html" class="element-item" id="item-close-Studio">
+                                <i class="material-icons">close</i>
+                                <div class="element-card">
+                                    back
+                                </div>
+                            </a>
+                        </li>
+                </ul>
+            </div>
+            <div class="extra-panel-Studio" id="extra-panel-Studio"></div>
+            </div>
+            <div class="work-table" id="work-table">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h3 class="font-weight-bold">HTML</h3>
+                                <select name="theme-picker" class="form-control w-25 rounded-0" id="theme-choose">
+                                    <option value="vs">Visual Light</option>
+                                    <option value="vs-dark">Visual Dark</option>
+                                    <option value="hc-black">Visual High Contrast</option>
+                                </select>
+                            </div>
+                            <div class="card-body" id="editor-container">
+                                   <div id="editor" class="shadow-sm border" style="min-height:30vh;min-width: 100%;"></div> 
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="btn btn-primary" id="send-data-Studio">Send</div>    
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <!-- <script src="../../assets/js/dragAndDrop.js"></script> -->
+        <script src="../../assets/plugins/jquery/jquery-3.4.1.min.js"></script>
+        <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/connect.js"></script>
+
+        <script src="../../assets/plugins/monaco/min/vs/loader.js"></script>
+        <script src="https://unpkg.com/emmet-monaco-es/dist/emmet-monaco.min.js"></script>
+        <script src="../../assets/js/pages/studio.js"></script>
+    </body>
+</html>
