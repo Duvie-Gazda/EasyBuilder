@@ -9,11 +9,11 @@ function dradElement(elementIDName){
 
     oject.style.position = 'absolute';
     oject.style.zIndex = 1000;
-    document.body.append(oject);
+    // document.body.append(oject);
     moveAt(event.pageX, event.pageY);
     function moveAt(pageX, pageY) {
-      oject.style.left = pageX - shiftX +15 + 'px';
-      oject.style.top = pageY - shiftY-15 + 'px';
+      oject.style.left = pageX - shiftX-70 + 'px';
+      oject.style.top = pageY - shiftY + 'px';
     }
 
     function onMouseMove(event) {
@@ -49,6 +49,7 @@ function dradElement(elementIDName){
   };
   oject.onclick = function() {
     $('#html-editor-container').css({'cursor':'default'});
+    oject.style.zIndex = 10;
     return false;
   };
 }

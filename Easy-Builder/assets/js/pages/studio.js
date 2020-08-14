@@ -20,7 +20,7 @@ function CreateEditor(htmlContainer, language) {
       });
     }
     if (language === "css") {
-      emmetMonaco.emmetCSS();
+      //emmetMonaco.emmetCSS();
       window.editorCSS = monaco.editor.create(container, {
         value: elementNew.cssVal,
         language: language,
@@ -112,6 +112,54 @@ $('#Html-Studio').on('click', function(){
   }
 })
 
+$('#css-Studio').on('click', function(){
+  let data = [];
+  data.push(new elementOnPanel('<div>','','css-editor-container','css-editor-container','#work-table'));
+  data.push(new elementOnPanel('<div>','','card','css-editor-card','#css-editor-container'));
+  data.push(new elementOnPanel('<div>','','card-header d-flex justify-content-between align-items-center','css-editor-card-header','#css-editor-card'));
+  data.push(new elementOnPanel('<h3>','css','font-weight-bold','css-editor-card-header-text','#css-editor-card-header'));
+  data.push(new elementOnPanel('<div>','','card-body','css-editor-sub-container','#css-editor-card'));
+  data.push(new elementOnPanel('<div>','','shadow-sm border code-monaco-editor-St','css-editor','#css-editor-sub-container'));
+
+
+  //addDataByClick('#css-Studio',data,'#work-table','','work-table');
+  if($('#work-table').hasClass('#css-Studio'+'clicked')){
+    $('#work-table').removeClass('#css-Studio'+'clicked');
+    elementNew.cssVal = window.editorCSS.getValue();
+    $('#css-editor-container').remove();
+  }
+  else{
+    appendElement(data);
+    $('#work-table').addClass('#css-Studio'+'clicked');
+    dradElement('css-editor-container');
+    CreateEditor("css-editor", "css");
+  }
+})
+
+$('#js-Studio').on('click', function(){
+  let data = [];
+  data.push(new elementOnPanel('<div>','','js-editor-container','js-editor-container','#work-table'));
+  data.push(new elementOnPanel('<div>','','card','js-editor-card','#js-editor-container'));
+  data.push(new elementOnPanel('<div>','','card-header d-flex justify-content-between align-items-center','js-editor-card-header','#js-editor-card'));
+  data.push(new elementOnPanel('<h3>','js','font-weight-bold','js-editor-card-header-text','#js-editor-card-header'));
+  data.push(new elementOnPanel('<div>','','card-body','js-editor-sub-container','#js-editor-card'));
+  data.push(new elementOnPanel('<div>','','shadow-sm border code-monaco-editor-St','js-editor','#js-editor-sub-container'));
+
+
+  //addDataByClick('#js-Studio',data,'#work-table','','work-table');
+  if($('#work-table').hasClass('#js-Studio'+'clicked')){
+    $('#work-table').removeClass('#js-Studio'+'clicked');
+    elementNew.jsVal = window.editorJS.getValue();
+    $('#js-editor-container').remove();
+  }
+  else{
+    appendElement(data);
+    $('#work-table').addClass('#js-Studio'+'clicked');
+    dradElement('js-editor-container');
+    CreateEditor("js-editor", "js");
+  }
+})
+
 $('#send-data-Studio').on('click', function(){
   if(window.editorHTML !== undefined){
     let htmlEditorValue =  window.editorHTML.getValue();
@@ -135,81 +183,5 @@ $('#send-data-Studio').on('click', function(){
 //ChangeEditorTheme("theme-choose");
 
 // Resize
-function makeResizableDiv(div) {
-  const element = document.querySelector(div);
-  const resizers = document.querySelectorAll(div + ' .resizer')
-  const minimum_size = 20;
-  let original_width = 0;
-  let original_height = 0;
-  let original_x = 0;
-  let original_y = 0;
-  let original_mouse_x = 0;
-  let original_mouse_y = 0;
-  for (let i = 0;i < resizers.length; i++) {
-    const currentResizer = resizers[i];
-    currentResizer.addEventListener('mousedown', function(e) {
-      e.preventDefault()
-      original_width = parseFloat(getComputedStyle(element, null).getPropertyValue('width').replace('px', ''));
-      original_height = parseFloat(getComputedStyle(element, null).getPropertyValue('height').replace('px', ''));
-      original_x = element.getBoundingClientRect().left;
-      original_y = element.getBoundingClientRect().top;
-      original_mouse_x = e.pageX;
-      original_mouse_y = e.pageY;
-      window.addEventListener('mousemove', resize)
-      window.addEventListener('mouseup', stopResize)
-    })
-    
-    function resize(e) {
-      if (currentResizer.classList.contains('bottom-right')) {
-        const width = original_width + (e.pageX - original_mouse_x);
-        const height = original_height + (e.pageY - original_mouse_y)
-        if (width > minimum_size) {
-          element.style.width = width + 'px'
-        }
-        if (height > minimum_size) {
-          element.style.height = height + 'px'
-        }
-      }
-      else if (currentResizer.classList.contains('bottom-left')) {
-        const height = original_height + (e.pageY - original_mouse_y)
-        const width = original_width - (e.pageX - original_mouse_x)
-        if (height > minimum_size) {
-          element.style.height = height + 'px'
-        }
-        if (width > minimum_size) {
-          element.style.width = width + 'px'
-          element.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
-        }
-      }
-      else if (currentResizer.classList.contains('top-right')) {
-        const width = original_width + (e.pageX - original_mouse_x)
-        const height = original_height - (e.pageY - original_mouse_y)
-        if (width > minimum_size) {
-          element.style.width = width + 'px'
-        }
-        if (height > minimum_size) {
-          element.style.height = height + 'px'
-          element.style.top = original_y + (e.pageY - original_mouse_y) + 'px'
-        }
-      }
-      else {
-        const width = original_width - (e.pageX - original_mouse_x)
-        const height = original_height - (e.pageY - original_mouse_y)
-        if (width > minimum_size) {
-          element.style.width = width + 'px'
-          element.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
-        }
-        if (height > minimum_size) {
-          element.style.height = height + 'px'
-          element.style.top = original_y + (e.pageY - original_mouse_y) + 'px'
-        }
-      }
-    }
-    
-    function stopResize() {
-      window.removeEventListener('mousemove', resize)
-    }
-  }
-}
 
-//makeResizableDiv('.resizable')
+//makeResizableDiv('#html-editor')
