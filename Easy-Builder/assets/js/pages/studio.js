@@ -89,7 +89,27 @@ $('#task-Studio').on('click', function(){
 })
 
 $('#Html-Studio').on('click', function(){
-  // if ($('#work-table').hasClass()
+  let data = [];
+  data.push(new elementOnPanel('<div>','','html-editor-container','html-editor-container','#work-table'));
+  data.push(new elementOnPanel('<div>','','card','html-editor-card','#html-editor-container'));
+  data.push(new elementOnPanel('<div>','','card-header d-flex justify-content-between align-items-center','html-editor-card-header','#html-editor-card'));
+  data.push(new elementOnPanel('<h3>','HTML','font-weight-bold','html-editor-card-header-text','#html-editor-card-header'));
+  data.push(new elementOnPanel('<div>','','card-body','html-editor-sub-container','#html-editor-card'));
+  data.push(new elementOnPanel('<div>','','shadow-sm border code-monaco-editor-St','html-editor','#html-editor-sub-container'));
+
+
+  //addDataByClick('#Html-Studio',data,'#work-table','','work-table');
+  if($('#work-table').hasClass('#Html-Studio'+'clicked')){
+    $('#work-table').removeClass('#Html-Studio'+'clicked');
+    elementNew.htmlVal = window.editorHTML.getValue();
+    $('#html-editor-container').remove();
+  }
+  else{
+    appendElement(data);
+    $('#work-table').addClass('#Html-Studio'+'clicked');
+    dradElement('html-editor-container');
+    CreateEditor("html-editor", "html");
+  }
 })
 
 $('#send-data-Studio').on('click', function(){
@@ -112,5 +132,84 @@ $('#send-data-Studio').on('click', function(){
 })
     
     
-CreateEditor("editor", "html");
 //ChangeEditorTheme("theme-choose");
+
+// Resize
+function makeResizableDiv(div) {
+  const element = document.querySelector(div);
+  const resizers = document.querySelectorAll(div + ' .resizer')
+  const minimum_size = 20;
+  let original_width = 0;
+  let original_height = 0;
+  let original_x = 0;
+  let original_y = 0;
+  let original_mouse_x = 0;
+  let original_mouse_y = 0;
+  for (let i = 0;i < resizers.length; i++) {
+    const currentResizer = resizers[i];
+    currentResizer.addEventListener('mousedown', function(e) {
+      e.preventDefault()
+      original_width = parseFloat(getComputedStyle(element, null).getPropertyValue('width').replace('px', ''));
+      original_height = parseFloat(getComputedStyle(element, null).getPropertyValue('height').replace('px', ''));
+      original_x = element.getBoundingClientRect().left;
+      original_y = element.getBoundingClientRect().top;
+      original_mouse_x = e.pageX;
+      original_mouse_y = e.pageY;
+      window.addEventListener('mousemove', resize)
+      window.addEventListener('mouseup', stopResize)
+    })
+    
+    function resize(e) {
+      if (currentResizer.classList.contains('bottom-right')) {
+        const width = original_width + (e.pageX - original_mouse_x);
+        const height = original_height + (e.pageY - original_mouse_y)
+        if (width > minimum_size) {
+          element.style.width = width + 'px'
+        }
+        if (height > minimum_size) {
+          element.style.height = height + 'px'
+        }
+      }
+      else if (currentResizer.classList.contains('bottom-left')) {
+        const height = original_height + (e.pageY - original_mouse_y)
+        const width = original_width - (e.pageX - original_mouse_x)
+        if (height > minimum_size) {
+          element.style.height = height + 'px'
+        }
+        if (width > minimum_size) {
+          element.style.width = width + 'px'
+          element.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
+        }
+      }
+      else if (currentResizer.classList.contains('top-right')) {
+        const width = original_width + (e.pageX - original_mouse_x)
+        const height = original_height - (e.pageY - original_mouse_y)
+        if (width > minimum_size) {
+          element.style.width = width + 'px'
+        }
+        if (height > minimum_size) {
+          element.style.height = height + 'px'
+          element.style.top = original_y + (e.pageY - original_mouse_y) + 'px'
+        }
+      }
+      else {
+        const width = original_width - (e.pageX - original_mouse_x)
+        const height = original_height - (e.pageY - original_mouse_y)
+        if (width > minimum_size) {
+          element.style.width = width + 'px'
+          element.style.left = original_x + (e.pageX - original_mouse_x) + 'px'
+        }
+        if (height > minimum_size) {
+          element.style.height = height + 'px'
+          element.style.top = original_y + (e.pageY - original_mouse_y) + 'px'
+        }
+      }
+    }
+    
+    function stopResize() {
+      window.removeEventListener('mousemove', resize)
+    }
+  }
+}
+
+//makeResizableDiv('.resizable')
