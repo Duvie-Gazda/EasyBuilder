@@ -60,6 +60,10 @@ body{
     padding-right: 10px;  
 }
 
+.nav-panel-St .iconka{
+    font-size: 30px;
+}
+
 /* element */
 
 .element-item{
@@ -141,8 +145,4 @@ body{
 }
 #editor-container{
     min-width: 100%;
-    min-height: 100vh;
-}
-.iconka{
-    font-size: 30px;
 }
