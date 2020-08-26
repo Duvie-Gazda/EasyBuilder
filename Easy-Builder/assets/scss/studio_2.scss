@@ -1,0 +1,39 @@
+/* Extra Panel */
+.extra-panel-Studio{
+    width: 0px;
+    box-shadow: 0 0 1rem 1rem rgba(31,45,61,.04);
+    transition-duration: 1s;
+}
+.content-extra-panel-Studio{
+    width: 250px !important;
+    height: 100vh;
+    padding-right: 50px;
+    transition-duration:  2s;
+    padding-left: 55px;
+ }
+ .content-task{
+    width: 350px !important;
+    height: 100vh;
+    padding-right: 50px;
+    padding-left: 55px; 
+    overflow-y: scroll;
+}
+/* Editor */
+.editor-container{
+    .button{
+        padding: 20px;
+        box-shadow: 0,0,10px, black;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+/* Work Table */
+.work-table{
+    min-width: 100%;
+    overflow-y: scroll;
+    position: relative;
+    padding: 20px;
+    &::-webkit-scrollbar{
+        display: block;
+    }
+
+}
