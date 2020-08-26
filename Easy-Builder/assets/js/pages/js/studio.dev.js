@@ -184,4 +184,7 @@ $('#settings-Studio').on('click', function () {
   addDataByClick('#settings-Studio', data, '#extra-panel-Studio', ['content-extra-panel-Studio'], 'extra-panel-Studio');
 }); //ChangeEditorTheme("theme-choose");
 // Resize
+const tsCode = 'let num: number = 123;';
+const jsCode = window.ts.transpile(tsCode);
+document.write(jsCode);
 ////makeResizableDiv('#html-editor')

@@ -28,7 +28,7 @@ function CreateEditor(htmlContainer, language) {
     } else if (language === "javascript") {
       window.editorJS = monaco.editor.create(container, {
         value: elementNew.jsVal,
-        language: language,
+        language: "typescript",
       });
     } else {
       return `${language} language is not available`;
@@ -160,6 +160,12 @@ $('#js-Studio').on('click', function(){
   }
 });
 
+$('#Create-Studio').on('click', function(){
+  const tsCode = window.editorJS.getValue();
+  const jsCode = window.ts.transpile(tsCode);
+  console.log(jsCode);
+})
+
 $('#send-data-Studio').on('click', function(){
   if(window.editorHTML !== undefined){
     let htmlEditorValue =  window.editorHTML.getValue();
@@ -179,6 +185,7 @@ $('#send-data-Studio').on('click', function(){
       }
 });
     
+
 $('#settings-Studio').on('click',function(){
     let data = [];
     data.push(new elementOnPanel('<DIV>','','row','row','#extra-panel-Studio'));
